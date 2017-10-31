@@ -191,16 +191,13 @@ a与b的位异或
 卡片从里侧翻开不会改变此数值
 ●bool Card.IsCode(Card c, int code1[, int code2,...])
 检查c的卡号是否是code1[, 或者为code2...]
-●bool Card.IsType(Card c, int type)
-检查c是否属于类型type
-●bool Card.IsFusionType(Card c, int type)
-检查c用作融合素材时是否属于类型type（与IsType的区别在于对于魔陷区的怪兽卡，用其原本类型作判断）
+●bool Card.IsType(Card C, int type[, Card scard, int summon_type, int player])
+检查c是否属于类型type[, 当被player（默认PLAYER_ALL）用作scard的召唤素材（nil则为任何卡）进行summon_type召唤时]
 ●bool Card.IsRace(Card c, int race)
-检查c是否属于种族race
+检查c是否属于种族race[, 当被player（默认PLAYER_ALL）用作scard的召唤素材（nil则为任何卡）进行summon_type召唤时]
 ●bool Card.IsAttribute(Card c, int attribute)
-检查c是否属于属性attribute
-●bool Card.IsFusionAttribute(Card c, int attribute[, int player])
-检查c[由player融合召唤时]用作融合素材是否属于属性attribute
+检查c是否属于属性attribute[, 当被player（默认PLAYER_ALL）用作scard的召唤素材（nil则为任何卡）进行summon_type召唤时]e
+检查c是否属于属性attribute[, 当被player（默认PLAYER_ALL）用作scard的召唤素材（nil则为任何卡）进行summon_type召唤时]e
 ●bool Card.IsReason(Card c, int reason)
 检查c是否包含原因reason
 ●bool Card.IsStatus(Card c, int status)
@@ -799,9 +796,16 @@ f为返回一个interger值的函数，从g中筛选出具有最大的f的值的
 ●int Duel.SendtoExtraP(Card|Group targets, int player|nil, int reason)
 以reason原因把灵摆卡targets送去玩家player的额外卡组，返回值是实际被操作的数量
 如果player是nil则返回卡的持有者的额外卡组
+●int Duel.Sendto(Card | Group,int location, int reason,[int pos=POS_FACEUP, int player=PLAYER_NONE, int sequence=0])
+以reason原因把targets送去玩家player的location
+pos表示可选表示形式（仅限额外卡组和除外）
+如果player是nil则返回卡到持有者的location
+如果seq=0，则是返回卡组最顶端，seq=1则是返回卡组最底端，
+其余情况则是返回最顶端并且标记需要洗卡组
+返回值是实际被操作的数量
 ●Group Duel.GetOperatedGroup()
 此函数返回之前一次卡片操作实际操作的卡片组包括
-Duel.Destroy, Duel.Remove, Duel.SendtoGrave, 
+Duel.Destroy, Duel.Remove, Duel.SendtoGrave, Duel.SendTo
 Duel.SendtoHand, Duel.SendtoDeck, Duel.SendtoExtraP, Duel.Release, 
 Duel.ChangePosition, Duel.SpecialSummon, Duel.DiscardDeck
 ●void Duel.Summon(int player, Card c, bool ignore_count, Effect e|nil[, min=0])
@@ -863,6 +867,8 @@ dest只能是LOCATION_MZONE或者LOCATION_SZONE，pos表示可选表示形式，
 c必须是以REASON_TEMPORARY原因离场，并且离场后没有离开过那个位置
 ●void Duel.MoveSequence(Card c, int seq)
 移动c的序号，通常用于在场上换格子或者在卡组中移动到最上方或者最下方
+● void  Duel.SwapSequence(Card|Group targets1, Card|Group targets2)
+交换targets1与targets2的序号，只用于在相同区域的卡
 ●void Duel.SetChainLimit(function f)
 设定连锁条件，f的函数原型为 bool f(e,ep,tp)
 e表示要限制连锁的效果，ep表示要限制连锁的玩家，tp表示发动该效果的玩家
@@ -986,6 +992,10 @@ is_step=true则是装备过程的分解，需要配合Duel.EquipComplete使用
 location只能是LOCATION_MZONE或者LOCATION_SZONE
 reason为LOCATION_REASON_TOFIELD或LOCATION_REASON_CONTROL
 ##额外参数与凯撒斗技场的效果有关
+●int Duel.GetLocationCountFromEx(int player[, int player2, Group|Card c, Card sc])
+返回玩家player的怪兽区域可用于对在额外卡组的怪兽进行特殊召唤的空格数
+c为特殊召唤时/前离场的卡（通常为素材，或者类似于霸王门等自毁后特召）
+sc为确定的将被特殊召唤的卡
 ●Card Duel.GetFieldCard(int player, int location, int seq)
 返回玩家player的场上位于location序号为seq的卡，常用于获得场地区域·灵摆区域的卡
 ●bool Duel.CheckLocation(int player, int location, int seq)
@@ -1188,8 +1198,14 @@ void Duel.SetTargetParam(inte param)
 #(预留）
 ●int Duel.SelectPosition(int player, Card c, int pos)
 让玩家player选择c的表示形式并返回
-●int Duel.SelectDisableField(int player, int count, int s, int o, int filter)
+●int Duel.SelectDisableField(int player, int count, int s, int o, int filter[, bool check = false])
 让玩家player选择指定位置满足标记条件filter的count个可用的空格，并返回选择位置的标记
+check为true，则可以选择所有区域（包括额外怪兽区域和灵摆区域）；为false，则只能在通常怪兽区域和魔法陷阱区域选择
+常用于选择区域不能使用或移动怪兽格子
+●int Duel.SelectFieldZone(int player, int count, int s, int o[, int filter, bool check = false])
+让玩家player选择指定位置的count个空格，并返回选择位置的标记
+filter为满足可选标记的条件
+check为true，则可以选择所有区域（包括额外怪兽区域和灵摆区域）；为false，则只能在通常怪兽区域和魔法陷阱区域选择
 常用于选择区域不能使用或移动怪兽格子
 ##位置标记的定义如下
 ##flag = 0;
@@ -1203,8 +1219,10 @@ available是所有可选种族的组合值
 ●int Duel.AnnounceAttribute(int player, int count, int available)
 让玩家player从可选的属性中宣言count个属性
 available是所有可选属性的组合值
-●int Duel.AnnounceLevel(int player)
-让玩家宣言一个等级
+●● int/nil Duel.AnnounceLevel(int player[,int min = 1,int max=12, int exception = nil,...])
+让玩家在min和max中间宣言一个等级
+exception是不可选的等级
+如果没有可选的等级，则返回nil
 ●int Duel.AnnounceCard(int player[, int type=TYPE_MONSTER+TYPE_SPELL+TYPE_TRAP])
 让玩家player宣言一个[type类型的]卡片代号
 ●int Duel.AnnounceCardFilter(int player, ...)
@@ -1336,6 +1354,16 @@ return	function(target)
 return	function(target)
 			return target:IsNotTuner() and (not f or f(target,a,b,c))
 		end
+●function Auxiliary.FilterBoolFunctionEx(f,value)
+    return  function(target,scard,sumtype,tp)
+                return f(target,value,scard,sumtype,tp)
+            end
+end
+●group aux.GetMustBeMaterialGroup(int player, Group eg, int reason_player, Card c, Group mg, int reason)
+返回场上存在的player对c进行reason（REASON_SUMMON_TYPE）召唤必须使用的怪兽组
+eg为默认素材；mg为被筛选后的素材
+reason_player为效果原因玩家（通常为受影响玩家）
+reason_player为效果原因玩家（通常为受影响玩家）
 ●void aux.AddSynchroProcedure(Card c, function f1, function f2, int ct)
 为c添加同调召唤手续
 f1为调整满足的过滤条件，f2为调整以外满足的过滤条件（通常用aux.NonTuner）

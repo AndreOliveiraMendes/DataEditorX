@@ -1,0 +1,31 @@
+# database history
+C:\Users\ao_me\Desktop\random\edopro\cards.cdb
+C:\Users\ao_me\Desktop\random\custom_r\subverteds\subverteds.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\cards.cdb
+C:\Users\ao_me\Desktop\random\Nova pasta\Server_Script_CDB-master\cards.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\cards-tf.cdb
+C:\Users\ao_me\Desktop\ygopro_vs_links_beta1\cards.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\liveanime\Anime DB New.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\fitsetcode.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\fixstr.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\prerelease-macr.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\prerelease-cotd.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\official.cdb
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\prerelease.cdb
+# script history
+C:\Users\ao_me\Desktop\random\edopro\script\c15187079.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c210001109.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c94415058.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c210001103.lua
+C:\Users\ao_me\Desktop\random\edopro\single\test_coccon.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c67547370.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c36261276.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c74586817.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c511005090.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c97120394.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c210001102.lua
+C:\Users\ao_me\Desktop\random\custom_r\subverteds\script\c210001102.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c210001000.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c2830693.lua
+C:\Users\ao_me\Desktop\random\edopro\script\utility.lua
+C:\Users\ao_me\Desktop\random\edopro\script\c17412721.lua
