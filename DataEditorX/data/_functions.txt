@@ -98,6 +98,14 @@ a与b的位异或
 返回c的右灵摆刻度
 ●int Card.GetOriginalRightScale(Card c)
 返回c的原本的右灵摆刻度
+● bool Card.IsLinkMarker(Card c, int link marker)
+check if a card link marker match a value.
+● group Card.GetLinkedGroup(Card c)
+return a group of card that this card is linked to.
+● int Card.GetLinkedGroupCount(Card c)
+return the number of card that this card is linked to.
+● int Card.GetLinkedZone(Card c)
+get the zones that card points to.
 ●int Card.GetAttribute(Card c)
 返回c的当前属性
 注：对某些多属性怪兽如光与暗之龙，此函数的返回值可能是几个属性的组合值
@@ -1373,6 +1381,8 @@ filter为仪式怪兽满足的条件，素材的等级之和必须等于仪式�
 ●void aux.EnablePendulumAttribute(Card c[, active_effect=true])
 为灵摆怪兽c添加灵摆怪兽属性（灵摆召唤，灵摆卡的发动）
 active_effect=false则不注册灵摆卡“卡的发动”的效果
+●void aux.AddLinkProcedure(c, f, min, max, specialchk, desc)
+dududu
 ●void aux.EnableDualAttribute(Card c)
 为c添加二重怪兽属性
 ●bool aux.IsDualState(Effect e)

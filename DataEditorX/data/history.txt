@@ -1,31 +1,34 @@
 # database history
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\cards.cdb
+C:\Users\ao_me\Desktop\abbys.cdb
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\expansions\liveanimelinks\Anime DB New.cdb
+C:\Users\ao_me\Desktop\Gh8stree.cdb
+C:\Users\ao_me\Downloads\cards.cdb
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\expansions\liveanimelinks\Anime DB Fixes.cdb
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\expansions\live2017links\fixmisc.cdb
+C:\Users\ao_me\Downloads\Anime DB Removal.cdb
+C:\Users\ao_me\Desktop\junkuriboh.cdb
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\expansions\cards-tf.cdb
+C:\Users\ao_me\Desktop\random\kuriboh_idk_what_im_doing.cdb
 C:\Users\ao_me\Desktop\random\edopro\cards.cdb
-C:\Users\ao_me\Desktop\random\custom_r\subverteds\subverteds.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\cards.cdb
-C:\Users\ao_me\Desktop\random\Nova pasta\Server_Script_CDB-master\cards.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\cards-tf.cdb
-C:\Users\ao_me\Desktop\ygopro_vs_links_beta1\cards.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\liveanime\Anime DB New.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\fitsetcode.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\fixstr.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\prerelease-macr.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\prerelease-cotd.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\official.cdb
-C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\prerelease.cdb
+C:\Users\ao_me\Downloads\fixmisc.cdb
+C:\Users\ao_me\Downloads\fixmisc (1).cdb
+C:\Users\ao_me\Downloads\fixstr.cdb
+C:\Users\ao_me\Downloads\prerelease-dp19.cdb
 # script history
-C:\Users\ao_me\Desktop\random\edopro\script\c15187079.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c210001109.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c94415058.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c210001103.lua
-C:\Users\ao_me\Desktop\random\edopro\single\test_coccon.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c67547370.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c36261276.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c74586817.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c511005090.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c97120394.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c210001102.lua
-C:\Users\ao_me\Desktop\random\custom_r\subverteds\script\c210001102.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c210001000.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c2830693.lua
-C:\Users\ao_me\Desktop\random\edopro\script\utility.lua
-C:\Users\ao_me\Desktop\random\edopro\script\c17412721.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\single\raccon test.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c88241506.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c511013003.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c511002781.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c513000014.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c511004434.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c35699.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c27551.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c44330098.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c83986578.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c39972129.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c31444249.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c72648577.lua
+C:\Users\ao_me\Desktop\ygopro-1.033.D-Percy\expansions\live2017\script\constant.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\expansions\live2017links\script\constant.lua
+C:\Users\ao_me\Desktop\random\Nova pasta\ygopro_vs_links_beta\script\c87772572.lua
